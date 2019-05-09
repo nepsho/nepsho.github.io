@@ -159,7 +159,7 @@ html,body{
 	}
 
 	.title-head{
-		font-size: 40px;
+		font-size: 30px;
 	}
 
 	.nav-items{
@@ -167,6 +167,9 @@ html,body{
 	}
 
 	.title-content p{
-		font-size: 30px;
+		font-size: 20px;
+	}
+	.page-content p{
+		font-size: 20px;	
 	}
 }
