@@ -140,12 +140,35 @@ html,body{
 	font-family: 'Sofia', cursive;
 }
 
+.typewriter-content{
+	padding: 10px;
+	border-radius: 10px;
+	background: #EF5939 !important;
+	color: #2E3645 !important;
+	font-family: 'Patua One', cursive !important;
+}
+
+.founder-name{
+	font-family: 'Righteous', cursive !important;
+}
+
+.signature{
+	margin-top: 20px;
+	width: 1px;
+	font-size: 35px;
+	display:block;
+    -webkit-transform: rotate(-10deg); 
+    -moz-transform: rotate(-10deg); 
+	font-family: 'Sacramento', cursive !important;
+}
+
 .test{
 	font-family: 'Gugi', cursive;
 	font-family: 'Sofia', cursive;
 	font-family: 'Righteous', cursive;
 	font-family: 'Sacramento', cursive;
 	font-family: 'Patua One', cursive;
+	font-family: 'Special Elite', cursive;
 }
 
 .hide{
