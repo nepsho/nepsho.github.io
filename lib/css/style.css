@@ -5,6 +5,11 @@ html,body{
 	height: 100%;
 }
 
+body::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
 .selectOff {
   -webkit-touch-callout: none;
     -webkit-user-select: none; 
@@ -24,6 +29,14 @@ html,body{
 
 .white-bg{
 	background: #FFFFFF !important;
+}
+
+.red-theme-bg{
+	background: #EF5939 !important;
+}
+
+.red-theme-color{
+	color: #EF5939 !important;
 }
 
 .red{
@@ -49,6 +62,41 @@ html,body{
 .blue-bg{
 	background:#6d75f1 !important;
 }
+
+
+.page-project-container{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	border-top: 1px solid #EF5939 !important;
+	border-bottom: 1px solid #EF5939 !important;
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+.project-card{
+	height: 150px;
+	background: #6d75f1;
+	color: #FFFFFF;
+	border-radius: 10px;
+	cursor: pointer;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.project-name{
+	font-size: 30px;
+	font-weight: bold;
+	display: block;
+	margin-top: 50px;
+	text-align:center;
+}
+
+.project-card:hover{
+	transform: scale(1.05) !important;
+}
+
+
+
+
 
 .navbar{
 	border-radius: 0 !important;

@@ -27,6 +27,10 @@
 <link rel="stylesheet" href="../lib/css/bootstrap.min.css">
 <link href="https://fonts.googleapis.com/css?family=Gugi|Patua+One|Righteous|Sacramento|Sofia|Special+Elite" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" type="text/css" href="../lib/css/style.css">
+<script src="../lib/js/jquery.min.js"></script>
+<script src="../lib/js/bootstrap.min.js"></script>
 <link
   rel="stylesheet"
   href="../lib/css/prism.css"
@@ -34,6 +38,21 @@
 <script src="../lib/js/prism.js"></script>
 
 <style type="text/css">
+    html,body{
+        background: #FFFFFF;
+        color: #000000;
+        width: 100%;
+        height: 100%;
+    }
+    body::-webkit-scrollbar {
+        width: 6px;
+    /*    background: transparent;*/
+    }
+    body::-webkit-scrollbar-thumb {
+        background: #EF5939;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
     .package-icons{
         display: flex;
     }
@@ -45,6 +64,50 @@
 
 </head>
 <body>
+
+<nav class="navbar navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand selectOff" href="#">NepSho</a>
+      <a class="navbar-brand nav-menu-mobile" id="nav-menu-mobile-btn">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <div class="nav-items" id="nav-items-container">
+        <ul class="nav navbar-nav">
+          <li class="center">
+            <a href="./index.html" class="langf" lang="en">Home</a>
+            <a href="./index.html" class="langf" lang="hi">होम</a>
+          </li>
+          <li class="custom-active center">
+            <a href="#" class="langf" lang="en">Projects</a>
+            <a href="#" class="langf" lang="hi">प्रोजेक्ट्स</a>
+          </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li center class="dropdown">
+                <a href="#" class="center dropdown-toggle lang-icon"
+                data-toggle="dropdown">
+                    <i class="fa fa-language"></i>
+                </a>
+                <ul class="dropdown-menu blue-bg">
+                    <li class="center" onclick="changeLang('en')">
+                        <a href="#" class="white">English</a>
+                    </li>
+                    <li class="center" onclick="changeLang('hi')">
+                        <a href="#" class="white">हिंदी</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+
+    </div>
+
+  </div>
+</nav>
+
 
 <div class="container">
 
@@ -278,5 +341,6 @@
 </div>
 
 
+<script type="text/javascript" src="../lib/js/main.js"></script>
 </body>
 </html>
