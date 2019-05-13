@@ -311,6 +311,8 @@
         <span class="hljs-comment">
             /* Sample output 
             { 
+                url : 'https://nepsho.github.io/example/meta_tags.html'
+                status : 200,
                 success : true,
                 html : "&lt;html&gt;&lt;/html&gt;"
             }
@@ -326,9 +328,9 @@
             <br>
         for meta request a option is required which control and specify the desired output.</p>
         <pre><code class="language-js"><span class="hljs-keyword">
-        var</span> option = [
-            fields; [<span class="hljs-string">"logo"</span>,<span class="hljs-string">"description"</span>,<span class="hljs-string">"title"</span>] <span class="hljs-comment">/*fields you want*/</span>
-        ];
+        var</span> option = {
+            fields: [<span class="hljs-string">"logo"</span>,<span class="hljs-string">"description"</span>,<span class="hljs-string">"title"</span>] <span class="hljs-comment">/*fields you want*/</span>
+        };
 
         <span class="hljs-comment">/* Callback method */</span>
         webget.getmeta(<span class="hljs-string">"https://nepsho.github.io/"</span>,option,(data)=&gt;{
@@ -352,7 +354,7 @@
             { 
                 logo : "https://nepsho.github.io/lib/img/logo.png",
                 title : "NepSho",
-                description : ""
+                description : "Promise and callback based website-info getter using metadata of websites..."
             }
         */</span>
         </code></pre>
