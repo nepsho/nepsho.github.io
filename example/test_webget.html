@@ -12,7 +12,9 @@
 <script type="text/javascript">
  
 $.ajax({
-  url: "https://42d9708a.ngrok.io",
+  type: "POST",
+  url: "https://webgetdemo.herokuapp.com/get_meta",
+  data:{url:"http://nepsho.github.io/example/meta_tags.html"},
   success: function(data){
     console.log(data,"_------------------------_");
   }
