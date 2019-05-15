@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WebGet Example</title>
+  <meta name="og:title" content="webget"/>
+  <meta name="og:site_name" content="webget"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Promise and callback based website-info getter using metadata of websites...">
+  <meta name="theme-color" content="#2E3645" />
+  <meta property="og:image" content="../lib/img/logo.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="200">
+  <meta property="og:image:height" content="200">
+  <meta name="author" content="BCrazyDreamer, bcrazydreamer@gmail.com">
+  <meta name="keywords" content="NepSho ,Open source, webget, api, nodejs, meta, javascript, programming">
+  <meta name="subject" content="Open source">
+  <meta name="copyright" content="NepSho">
+  <meta name="language" content="en">
+  <meta name="robots" content="index,follow" />
+  <meta name="revised" content="Sunday, May 9th, 2019, 0:00 am" />
+  <meta name="abstract" content="NepSho abstract">
+  <meta name="topic" content="Tech">
+  <meta name="summary" content="tech is super">
+  <meta name="designer" content="bcrazydreamer">
+  <meta name="reply-to" content="bcrazydreamer@gmail.com">
+  <meta name="url" content="https://nepsho.github.io">
+  <meta name="category" content="Web">
+  <meta name="og:email" content="bcrazydreamer@gmail.com"/>
+  <meta name="og:phone_number" content="123-456-7890"/>
+  <meta name="og:country-name" content="INDIA"/>
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+
+  <link rel="icon" href="../lib/img/logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="../lib/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Gugi|Patua+One|Righteous|Sacramento|Sofia|Special+Elite" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../lib/css/style.css">
+  <script src="../lib/js/jquery.min.js"></script>
+  <script src="../lib/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../lib/css/webget_example.css">
+
+  <link
+    rel="stylesheet"
+    href="../lib/css/prism.css"
+  />
+  <script src="../lib/js/prism.js"></script>
+</head>
+<body>
+
+<div class="loader-main-body" id="main_loader">
+  <div class="center-all" id="loader_spinner">
+    <div class="loader"></div>
+      <h2 class="" id="init_loading_text">Creating server...</h2>
+  </div>
+</div>
+
+<nav class="navbar navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand selectOff" href="#">NepSho</a>
+      <a class="navbar-brand nav-menu-mobile" id="nav-menu-mobile-btn">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <div class="nav-items" id="nav-items-container">
+      <ul class="nav navbar-nav">
+        <li class="custom-active center">
+          <a href="#" class="langf" lang="en">Home</a>
+          <a href="#" class="langf" lang="hi">होम</a>
+        </li>
+        <li class="center">
+          <a href="./opensource.html" class="langf" lang="en">Projects</a>
+          <a href="./opensource.html" class="langf" lang="hi">प्रोजेक्ट्स</a>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+      <li center class="dropdown">
+          <a href="#" class="center dropdown-toggle lang-icon"
+          data-toggle="dropdown">
+            <i class="fa fa-language"></i>
+          </a>
+        <ul class="dropdown-menu blue-bg">
+          <li class="center" onclick="changeLang('en')">
+            <a href="#" class="white">English</a>
+          </li>
+          <li class="center" onclick="changeLang('hi')">
+            <a href="#" class="white">हिंदी</a>
+          </li>
+        </ul>
+          </li>
+      </ul>
+  </div>
+  </div>
+</nav>
+
+
+<div class="container">
+  <div class="urlinputcontainer">
+      <div class="form-group">
+        <input type="text" class="form-control url_input_box" id="urlinput" placeholder="Enter website url">
+      </div>
+      <div class="url_btn_container">
+        <a class="btn btn-danger get_meta_btn" id="get_site_info_btn">Get Site Info</a>
+        <a class="btn btn-danger get_html_btn" id="get_site_html_btn">Get Site HTML</a>
+      </div>
+  </div>
+</div>
+
+<div class="container" style="margin-top: 20px" id="error_container">
+  <div class="alert alert-danger">
+    <strong>Error!</strong> <span id="error_msg">something wrong</span>
+  </div>
+</div>
+
+<div class="container output_main_contaier">
+  <div class="html_output_container">
+    <pre>
+        <code id="html_output_box" class="language-html">
+        </code>
+    </pre>
+  </div>
+
+  <div class="col-sm-12 col-xs-12 site_info_output_container">
+    <div class="col-sm-2 col-xs-12 output_logo_container" id="output_logo_container">
+      <!-- For Website Logo -->
+    </div>
+    <div class="col-sm-10 col-xs-12 output_basic_detail">
+      <span class="output_description" id="output_description">
+      </span>
+      <br>
+      <br>
+      <span class="output_title" id="output_title">
+        NepSho
+      </span>
+    </div>
+  </div>
+
+  <div class="col-sm-12 col-xs-12 site_info_table_container">
+    <table class="table table-bordered site_info_table">
+    <tbody id="table_inner_body">
+        <!-- Table output -->
+    </tbody>
+  </table>
+  </div>
+</div>
+
+
+
+
+<script type="text/javascript" src="../lib/js/main.js"></script>
+<script type="text/javascript" src="../lib/js/webget_example.js"></script>
+</body>
+</html>
