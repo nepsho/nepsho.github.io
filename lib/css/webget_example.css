@@ -159,4 +159,7 @@ html,body{
   .output_basic_detail{
     padding: 5px 0 !important;
   }
-}
+.output_title{
+  font-size: 20px;
+ }
+} 
