@@ -30,7 +30,16 @@
 <link rel="stylesheet" type="text/css" href="./lib/css/style.css">
 <script src="./lib/js/jquery.min.js"></script>
 <script src="./lib/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+function npmImgErr(e){
+	var element = e.parentElement;
+ 	element.parentNode.removeChild(element);
+}
 
+function npmImgLoad(e){
+	e.style.display="block";
+}
+</script>
 </head>
 <body>
 
@@ -83,24 +92,122 @@
 		NepSho Open Source Projects
 	</div>
 
-	<div class="col-sm-12 col-xs-12 page-project-container">
+	<div class="col-sm-12 col-xs-12 page-project-container b-top-main">
 		<div class="col-sm-12 col-xs-12">
 
-		<a href="https://nepsho.github.io/opensource/webget.html" target="_blank">
-			<div class="col-sm-4 col-xs-12 project-card">
-				<span class="project-name">
-					Webget
-					<img src="https://img.shields.io/npm/v/webget.svg?style=flat-square" alt="npm version">
-				</span>
+		<a href="https://www.npmjs.com/package/webthief" target="_blank">
+			<div class="col-sm-4 col-xs-12">
+				<div class="project-card">
+					<div style="display: block;">
+					<span class="project-name">
+						WebThief
+						
+					</span>
+					<span class="project-name">
+						<img src="https://img.shields.io/npm/v/webthief.svg?style=flat-square" 
+						onerror="this.onerror=null;this.style.display='none';npmImgErr(this)"
+						onload="npmImgLoad(this)" alt="npm version">
+					</span>
+					</div>
+				</div>
 			</div>
 		</a>
+
+		<a href="https://www.npmjs.com/package/bvalid" target="_blank">
+			<div class="col-sm-4 col-xs-12">
+				<div class="project-card">
+					<div style="display: block;">
+					<span class="project-name">
+						Bvalid
+					</span>
+					<span class="project-name">
+						<img src="https://img.shields.io/npm/v/bvalid.svg?style=flat-square"
+						onerror="this.onerror=null;this.style.display='none';npmImgErr(this)"
+						onload="npmImgLoad(this)" alt="npm version">
+					</span>
+					</div>
+				</div>
+			</div>
+		</a>
+
+		<a href="https://www.npmjs.com/package/obclone" target="_blank">
+			<div class="col-sm-4 col-xs-12">
+				<div class="project-card">
+					<div style="display: block;">
+						<span class="project-name">
+							Obclone
+						</span>
+						<span class="project-name">
+							<img src="https://img.shields.io/npm/v/obclone.svg?style=flat-square"
+							onerror="this.onerror=null;this.style.display='none';npmImgErr(this)"
+							onload="npmImgLoad(this)" alt="npm version">
+						</span>
+					</div>
+				</div>
+			</div>
+		</a>
+
+		<a href="https://www.npmjs.com/package/unifont" target="_blank">
+			<div class="col-sm-4 col-xs-12">
+				<div class="project-card">
+					<div style="display: block;">
+						<span class="project-name">
+							Unifont
+						</span>
+						<span class="project-name">
+							<img src="https://img.shields.io/npm/v/unifont.svg?style=flat-square"
+							onerror="this.onerror=null;this.style.display='none';npmImgErr(this)"
+							onload="npmImgLoad(this)" alt="npm version">
+						</span>
+					</div>
+				</div>
+			</div>
+		</a>
+
+		<a href="https://www.npmjs.com/package/webget" target="_blank">
+			<div class="col-sm-4 col-xs-12">
+				<div class="project-card project-deprecated">
+					<div style="display: block;">
+						<span class="project-name">
+							WebGet
+						</span>
+						<span class="project-name">
+							<img src="https://img.shields.io/npm/v/webget.svg?style=flat-square"
+							onerror="this.onerror=null;this.style.display='none';npmImgErr(this)"
+							onload="npmImgLoad(this)" alt="npm version">
+						</span>
+					</div>
+				</div>
+			</div>
+		</a>
+
+
 
 		</div>
 	</div>
 
+	<div class="col-sm-12 title-head selectOff" lang="en-IN">
+		NepSho Open Source Demo
+	</div>
+
+	<div class="col-sm-12 col-xs-12 page-project-container b-top-main">
+		<div class="col-sm-12 col-xs-12">
+
+			<a href="https://nepsho.github.io/opensource/webthief_example.html" target="_blank">
+				<div class="col-sm-4 col-xs-12">
+					<div class="project-card">
+						<span class="project-name">
+							WebThief
+						</span>
+					</div>
+				</div>
+			</a>
+
+		</div>
+	</div>
 
 	<div class="col-sm-12 title-head selectOff" lang="en-IN">Open Source</div>
-	<div class="col-sm-12 page-content">
+	<div class="col-sm-12 page-content b-top-main">
 		<p lang="en" class="langf">
 			Open source is a term denoting that a product includes permission to use its source code, design documents, or content. It most commonly refers to the open-source model, in which open-source software or other products are released under an open-source license as part of the open-source-software movement. Use of the term originated with software, but has expanded beyond the software sector to cover other open content and forms of open collaboration.
 		</p>

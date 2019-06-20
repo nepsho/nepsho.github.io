@@ -63,6 +63,9 @@ html,body{
 .url_btn_container{
   text-align: center;
 }
+.search-btns{
+  margin-top: 5px !important;
+}
 .get_meta_btn{
   border:0 !important;
   border-color: #8C3EAB;

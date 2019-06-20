@@ -68,12 +68,17 @@ body::-webkit-scrollbar {
 	background:#6d75f1 !important;
 }
 
+.b-top-main{
+	border-top: 1px solid #EF5939 !important;
+}
+
+.b-bottom-main{
+	border-bottom: 1px solid #EF5939 !important;
+}
 
 .page-project-container{
 	padding-top: 50px;
 	padding-bottom: 50px;
-	border-top: 1px solid #EF5939 !important;
-	border-bottom: 1px solid #EF5939 !important;
 	margin-top: 10px;
 	margin-bottom: 30px;
 }
@@ -86,17 +91,28 @@ body::-webkit-scrollbar {
 	cursor: pointer;
 	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
 }
 .project-name{
 	font-size: 30px;
 	font-weight: bold;
-	display: block;
-	margin-top: 50px;
+	display: block !important;
 	text-align:center;
+}
+
+.project-name img{
+	display: none;
 }
 
 .project-card:hover{
 	transform: scale(1.05) !important;
+}
+
+.project-deprecated{
+	background: #EF5939 !important;
 }
 
 
@@ -229,13 +245,16 @@ body::-webkit-scrollbar {
 }
 
 @media(max-width: 768px){
+	.project-name{
+		font-size: 20px;
+	}
 	.nav-menu-mobile{
 		display: flex;
 		float: right;
 	}
 
 	.title-head{
-		font-size: 30px;
+		font-size: 25px;
 	}
 
 	.nav-items{
