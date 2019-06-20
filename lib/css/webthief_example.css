@@ -210,6 +210,12 @@ html,body{
   justify-content: center;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
+.image-gaurd{
+  height: 300px;
+  width: 100%;
+  position: absolute;
+  background: rgba(0,0,0,0);
+}
 /*---------------------*/
 
 @media(max-width: 768px){

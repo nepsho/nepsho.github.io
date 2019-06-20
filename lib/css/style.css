@@ -15,7 +15,7 @@ body::-webkit-scrollbar {
     background: transparent;
 }
 
-.selectOff {
+.selectOff,img {
   -webkit-touch-callout: none;
     -webkit-user-select: none; 
      -khtml-user-select: none;
