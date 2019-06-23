@@ -8,10 +8,10 @@ html,body{
   height: 100%;
   width: 100%;
   position: fixed;
-  background: rgba(0,0,0,0.2);
+  background: rgba(0,0,0,0.6);
 }
 #init_loading_text{
-  color: #000;
+  color: #fff;
    font-family: 'Gugi';
 }
 .loader {
